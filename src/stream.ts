@@ -385,6 +385,7 @@ export function streamKiro(
           additionalModelRequestFields = {
             thinking: {
               type: thinkingEnabled ? "adaptive" : "disabled",
+              ...thinkingEnabled ? { display: "summarized" } : {},
             },
           };
 
